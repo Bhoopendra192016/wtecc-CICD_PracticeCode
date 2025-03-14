@@ -22,9 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          chmod -R 755 /github/home/.cache/pip
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install --no-cache-dir -r requirements.txt
 
       - name: Lint with flake8
         run: |
